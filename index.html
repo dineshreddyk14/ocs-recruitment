@@ -3,12 +3,15 @@
 <head>
 	<title>github explorer</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="styler.css">
+	<link rel="stylesheet" type="text/css" href="styler.css">
 	<script>
-		function calc(){
-			var num1 = document.getElementById("in1").value;
-			var num2 = document.getElementById("in2").value;
-			document.getElementsByTagName("p")[0].innerHTML = num1 + "+" + num2 + "=" + (parseInt(num1) + parseInt(num2));
+		function fetch(){
+			var name = document.getElementById("in1").value;
+			var n = document.getElementById("in2").value;
+			var m = document.getElementById("in3").value;
+			document.getElementsById("out").innerHTML = parser(name,parseInt(n),parseInt(m));
+		}
+		function parser(name,n,m){
 		}
 	</script>
 </head>
@@ -16,11 +19,13 @@
 	<div class="header">
 		<h1>OCS Recruitment</h1>
 	</div>
-	<div class="body">
-		<input id="in1" type="number"/>
-		<input id="in2" type="number"/>
-		<input id="in3" type="number"/>
-		<button onclick="calc()">Fetch</button>
+	<div class="form">
+		<input id="in1" type="text" placeholder="Organization" />
+		<input id="in2" type="number" placeholder="N (Top Repos)" />
+		<input id="in3" type="number" placeholder="M (Top Committees)"/>
+		<button onclick="fetch()">Fetch</button>
+	</div>
+	<div class="result" id="out">
 	</div>
 </body>
 </html>
