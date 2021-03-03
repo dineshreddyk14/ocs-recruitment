@@ -4,8 +4,23 @@
 	<title>github explorer</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="styler.css">
+	<script>
+		function calc(){
+			var num1 = document.getElementById("in1").value;
+			var num2 = document.getElementById("in2").value;
+			document.getElementsByTagName("p")[0].innerHTML = num1 + "+" + num2 + "=" + (parseInt(num1) + parseInt(num2));
+		}
+	</script>
 </head>
 <body>
-
+	<div class="header">
+		<h1>OCS Recruitment</h1>
+	</div>
+	<div class="body">
+		<input id="in1" type="number"/>
+		<input id="in2" type="number"/>
+		<input id="in3" type="number"/>
+		<button onclick="calc()">Fetch</button>
+	</div>
 </body>
 </html>
